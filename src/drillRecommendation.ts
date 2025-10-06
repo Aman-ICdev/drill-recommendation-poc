@@ -45,7 +45,9 @@ export class ScalableDrillRecommendationSystem {
         const relevantDrills = await this.vectorStoreManager.findRelevantDrills(
             userProfile, 
             userProgress, 
-            topK, 
+            topK,
+            skillLevel,
+            equipment
         );
 
         // Deduplicate by title and return original topK count
